@@ -1,0 +1,17 @@
+<h1>Contact</h1>
+<div>
+   Fist Name: <%= @contact.first_name %>
+</div>
+<div>
+   Last Name: <%= @contact.last_name %>
+</div>
+<div>
+   Email: <%= @contact.email %>
+</div>
+<div>
+   Phone Number: <%= @contact.phone_number %>
+</div>
+
+<%= form_tag "/contacts/#{@contact.id}", method: :delete do %>
+  <input type = "submit" value = "delete">
+<% end %>
