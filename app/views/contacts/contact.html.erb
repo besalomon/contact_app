@@ -12,6 +12,8 @@
    Phone Number: <%= @contact.phone_number %>
 </div>
 
+<a href = "<%= "/contacts/#{@contact.id}/edit" %>"> <input type = "submit" value = "Edit"> </a>
+
 <%= form_tag "/contacts/#{@contact.id}", method: :delete do %>
   <input type = "submit" value = "delete">
 <% end %>
