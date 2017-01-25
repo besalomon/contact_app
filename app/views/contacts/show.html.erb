@@ -1,16 +1,19 @@
 <h1>Contact</h1>
 <div>
-   Fist Name: <%= @contact.first_name %>
+   Full Name: <%= @contact.full_name %>
 </div>
-<div>
-   Last Name: <%= @contact.last_name %>
-</div>
+
 <div>
    Email: <%= @contact.email %>
 </div>
 <div>
    Phone Number: <%= @contact.phone_number %>
 </div>
+
+<div>
+  Updated date : <%= @contact.dateupdated %>
+</div>
+
 
 <a href = "<%= "/contacts/#{@contact.id}/edit" %>"> <input type = "submit" value = "Edit"> </a>
 
