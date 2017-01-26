@@ -4,6 +4,10 @@
     <input type = "text" name = "first_name" value = "<%= @contact.first_name %>">
     </div>
 
+    <div>Middle Name:
+    <input type = "text" name = "middle_name" value = "<%= @contact.middle_name %>">
+    </div>    
+
     <div>Last name:
     <input type = "text" name = "last_name" value = "<%= @contact.last_name %>">
     </div>
@@ -16,6 +20,9 @@
     <input type = "text" name = "phone_number" value = "<%= @contact.phone_number %>">
     </div>
 
+    <div>Biography:
+    <input type = "text" name = "bio" value = "<%= @contact.bio %>">
+    </div>
 <input type = "submit" name = "Save" value = "Update">
 
 <% end %>

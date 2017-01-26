@@ -1,16 +1,20 @@
 <table border="1">
 <tr>
   <th>First Name:</th>
+  <th>Middle Name:</th>
   <th>Last Name:</th>
   <th>Email:</th>
   <th>Phone Number:</th>
+  <th>Biography:</th>
 </tr>
   <% @contacts.each do |contact| %>
   <tr>
-    <td><%= contact.first_name %></td>
+    <td><a href = "<%= "/contacts/#{contact.id}"%>"> <%= contact.first_name %></a></td>
+    <td><%= contact.middle_name %></td>
     <td><%= contact.last_name %></td>
     <td><%= contact.email %></td>
     <td><%= contact.phone_number %></td>
+    <td><%= contact.bio %></td>
   </tr>
   <% end %>
 </table>
