@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get "/contacts/new", to: 'contacts#new'
 
+  post "/contacts/search", to: 'contacts#search'
+
   get "/contacts/:id", to: 'contacts#show'
 
   post "/contacts", to: 'contacts#create'

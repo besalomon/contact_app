@@ -42,4 +42,15 @@ class ContactsController < ApplicationController
     redirect_to "/contacts"
     flash[:warning] = "The contact has been deleted"
   end
+
+  def search
+    search_word = params[:search]
+    @contacts = Contact.where("first_name LIKE ? OR last_name LIKE ?", "%#{search_word}%", "%#{search_word}%")
+    render :index
+    if @contacts.empty?
+      @contacts = Contact.search_all
+      render :index
+    end
+    
+  end
 end
