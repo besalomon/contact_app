@@ -17,6 +17,10 @@
 <div>
   Updated date : <%= @contact.dateupdated %>
 </div>
+Groups:
+<% @contact.groups.each do |group| %>
+  <li><%= group.name %></li>
+<% end %>
 
 
 <a href = "<%= "/contacts/#{@contact.id}/edit" %>"> <input type = "submit" value = "Edit"> </a>

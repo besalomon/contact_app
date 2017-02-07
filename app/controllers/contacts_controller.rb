@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-
+  belongs_to :user
 	def index
 		@contacts = Contact.all
 	end
